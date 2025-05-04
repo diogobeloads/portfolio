@@ -7,10 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Portfólio | Diogo Belo</title>
 </head>
 <body>
-    <nav class="navegacao">
+    <nav class="navegacao" mx-auto flex items-center>
         <ul class="menu">
             <li><a href="#inicio" class="menu-link">Inicio</a>
                 <a href="#sobre" class="menu-link">Sobre</a>
@@ -21,7 +22,7 @@
     </nav>
     <main id="inicio" class="cabecalho">        
         <img src="img/profile.png" alt="Foto do Diogo Belo" class="foto-perfil">
-        <h1 >Diogo Belo</h1>
+        <h1><strong>Diogo Belo</strong></h1>
         <p class="sobre--mim">
         Sou um desenvolvedor front-end apaixonado por transformar ideias em interfaces interativas e responsivas.
              <br> Tenho experiência com HTML, CSS, JavaScript, React e outras tecnologias modernas que me permitem criar aplicações web funcionais, acessíveis e visualmente atraentes. 
@@ -31,7 +32,7 @@
         
             <h2 class="sobre-titulo">Sobre mim</h2>
             <div class="sobre-caixa">
-                <p class="sobre-paragrafo">
+                <p class="sobre-paragrafo" flex items-center>
                     Olá, sou um desenvolvedor Front-End apaixonado por tecnologia!
                 </p>
             </div>
@@ -40,8 +41,8 @@
 
         <section class="projetos" id="projetos">
             <h2 class="projetos-titulo">Meus Projetos</h2>
-            <div class="projetos-caixa">
-                <div class="projetos-card">
+            <div class="container-projetos">
+                <div class="projetos-card" class="grid grid-cols-3 grid-rows-3 gap-4">
                     <img src="img/ebac store.png" alt="projeto 1" class="projetos-img">
                     <h3 class="info--projetos">EBAC Shoes</h3>
                     <p class="paragrafo--projetos">Projeto de uma loja virtual de tênis, para a Escola Britânica de Artes Criativas e Tecnologia (Ebac)</p>
@@ -63,11 +64,20 @@
             <h2 class="contato-titulo">Contato</h2>
             <form class="forumulario--contato" id="formulario">
                 <div class="nome--form">
-                    <input placeholder="Nome" class="campo--form">
+                    <input placeholder="Nome completo" class="campo--form">
                 </div>
                 <div class="grupo--form">
-                    <textarea class="text--form" placeholder="Digite sua mensagem"></textarea>
+                    <input class="text--form" placeholder="Digite seu email"></input>
                 </div>                    
+                <div class="grupo--form">
+                    <textarea class="text--form" rows="10" cols="21" placeholder="Digite sua mensagem"></textarea>
+                </div>
+                <button type="button" class="bg-indigo-500 ..." disabled>
+                    <svg class="mr-3 size-5 animate-spin ..." viewBox="0 0 24 24">
+                      <!-- ... -->
+                    </svg>
+                    Enviando…
+                  </button>
             </form>
 
 </body>

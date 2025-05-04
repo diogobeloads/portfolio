@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
     box-sizing: border-box;
     font-family: "Cascadia Code", sans-serif;
@@ -11,10 +13,10 @@ html {
 
 :root {
     --claro: #ffffff;
-    --escuro: #0e1627;
+    --escuro: #070c18;
     --maisEscuro: #0a0f1c;
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
+    --primaria: #283688;
+    --secundaria: #091766;
     --vidro: rgba(255, 255, 255, 0.1);
 }
 
@@ -25,7 +27,7 @@ body {
 
 .navegacao {
     background-color:rgba(12, 22, 49, 0.8);
-    padding: .4rem;
+    padding: 1rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -34,13 +36,15 @@ body {
 
 .menu {
     display: flex;
-    gap: 3rem;
+    gap: 4rem;
     justify-content: center;   
     list-style: none;
 }
 .menu-link{
     color: var(--claro);
     font-weight: 500;
+    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
+    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
     margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
     margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
     padding: 0.5rem 0;
@@ -65,32 +69,57 @@ body {
 }
 
 .cabecalho {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .foto-perfil{
-    width: 350px;
-    height: 350px;
-    box-shadow: 0 0 20px rgba(82, 75, 211, 0.3);
     border-radius: 50%;
     border: 4px solid var(--vidro);
+    box-shadow: 0 0 20px rgba(63, 55, 230, 0.3);
+    height: 350px;
     margin-bottom: 1rem;
+    width: 350px;        
 }
 
+
+
 h1 {
-    font-size: 3.5rem;
     color: var(--primaria);
+    font-size: 3.5rem;
     font-weight: bold;
     margin: 20px;
 }
 
 .sobre--mim {
-    text-align: center;
-    font-size: 12px;
-    width: 70%;
+    font-size: 14px;
     margin: 0 auto;
+    text-align: center;
+    width: 70%;
+    position: relative;
 }
+
+.container-projetos {
+    margin: 100px 0 0 100px;
+    width: 70%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container-projetos img {
+    width: 60%;
+    height: 50%;
+    object-fit:cover;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.684);
+    transition: all ease-in-out 0.5s;
+}
+
+.container-projetos img:hover {
+    width: 100%;  
+  }
