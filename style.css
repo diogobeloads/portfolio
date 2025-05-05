@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: "Cascadia Code", sans-serif;
+    font-family: "Source Code Pro", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -13,9 +13,9 @@ html {
 
 :root {
     --claro: #ffffff;
-    --escuro: #070c18;
-    --maisEscuro: #0a0f1c;
-    --primaria: #283688;
+    --escuro: #040e29;
+    --maisEscuro: #0a111d;
+    --primaria: #0051ff;
     --secundaria: #091766;
     --vidro: rgba(255, 255, 255, 0.1);
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .navegacao {
-    background-color:rgba(12, 22, 49, 0.8);
+    background-color:rgba(10, 21, 49, 0.8);
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -36,17 +36,17 @@ body {
 
 .menu {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
     justify-content: center;   
     list-style: none;
 }
 .menu-link{
     color: var(--claro);
     font-weight: 500;
-    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
-    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
-    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
-    margin: 0 2rem; /* adicione uma margem de 2rem à esquerda e à direita */
+    margin: 0 1rem; /* adicione uma margem de 2rem à esquerda e à direita */
+    margin: 0 1rem; /* adicione uma margem de 1rem à esquerda e à direita */
+    margin: 0 1rem; /* adicione uma margem de 1rem à esquerda e à direita */
+    margin: 0 1rem; /* adicione uma margem de 1rem à esquerda e à direita */
     padding: 0.5rem 0;
     position: relative;
     text-decoration: none;
@@ -79,7 +79,7 @@ body {
 .foto-perfil{
     border-radius: 50%;
     border: 4px solid var(--vidro);
-    box-shadow: 0 0 20px rgba(63, 55, 230, 0.3);
+    box-shadow: 0 0 20px rgba(39, 107, 255, 0.288);
     height: 350px;
     margin-bottom: 1rem;
     width: 350px;        
@@ -95,12 +95,36 @@ h1 {
 }
 
 .sobre--mim {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 auto;
     text-align: center;
     width: 70%;
     position: relative;
 }
+
+.sobre--mim {
+    background-color: rgba(255, 255, 255, 0.2); /* cor de fundo transparente */
+    border-radius: 10px; /* bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* sombra */
+    padding: 20px;
+    width: 220px; /* largura do card */
+    height: 50px; /* altura do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); /* efeito de borrado */
+    box-shadow: 0 0 20px rgba(39, 107, 255, 0.288);
+  }
+  
+  .card-content {
+    text-align: center;
+    color: #333; /* cor do texto */
+  }
+  
+  .sobre--mim:hover {
+    background-color: rgba(255, 255, 255, 0.267); /* cor de fundo mais opaca ao passar o mouse */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* sombra mais forte ao passar o mouse */
+  }
 
 .container-projetos {
     margin: 100px 0 0 100px;
@@ -108,18 +132,20 @@ h1 {
     height: 400px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 14px;
+
+    & p, h3 {
+        text-align: center;
+        font-size: 10px;}
+
+        & h3{
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        & img {
+            width: 200px;
+            height: 150px;
+        }
 }
 
-.container-projetos img {
-    width: 60%;
-    height: 50%;
-    object-fit:cover;
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.684);
-    transition: all ease-in-out 0.5s;
-}
-
-.container-projetos img:hover {
-    width: 100%;  
-  }
